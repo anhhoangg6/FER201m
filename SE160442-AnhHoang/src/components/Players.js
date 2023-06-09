@@ -1,0 +1,24 @@
+import React from 'react'
+import { Players } from '../shared/ListOfPlayers'
+import "./Players.css"
+
+function Player() {
+
+    return (
+        <div className='container'>
+        {Players.map((player)=>(
+           <div className='column'>
+           <div className='card'>
+           <img src={player.img}/>
+             <h3>{player.name}</h3>
+             <p className='title'>{player.club}</p>
+             <div><button>Detail</button></div>
+             
+           </div>
+         </div>
+        ))}
+    </div>
+    )
+}
+
+export default Player;
